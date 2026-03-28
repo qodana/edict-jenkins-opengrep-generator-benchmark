@@ -1,0 +1,727 @@
+{
+  "$schema": "https://raw.githubusercontent.com/schemastore/schemastore/master/src/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "QDJVM",
+          "fullName": "Qodana for JVM",
+          "version": "262.SNAPSHOT",
+          "rules": [
+            {
+              "id": "opengrep-benchmark-OctalLiteral",
+              "shortDescription": {
+                "text": "opengrep-benchmark-OctalLiteral"
+              },
+              "fullDescription": {
+                "text": "Reports octal integer literals. Some coding standards prohibit the use of octal literals, as they may be easily confused with decimal literals.",
+                "markdown": "Reports octal integer literals. Some coding standards prohibit the use of octal literals, as they may be easily confused with decimal literals."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-OctalLiteral",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-StaticInitializerReferencesSubClass",
+              "shortDescription": {
+                "text": "opengrep-benchmark-StaticInitializerReferencesSubClass"
+              },
+              "fullDescription": {
+                "text": "Reports classes that refer to their subclasses in static initializers or static fields. Such references can cause JVM-level deadlocks in multithreaded environment.",
+                "markdown": "Reports classes that refer to their subclasses in static initializers or static fields. Such references can cause JVM-level deadlocks in multithreaded environment."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-StaticInitializerReferencesSubClass",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-CopyConstructorMissesField",
+              "shortDescription": {
+                "text": "opengrep-benchmark-CopyConstructorMissesField"
+              },
+              "fullDescription": {
+                "text": "Reports copy constructors that don't copy all the fields of the class. 'final' fields with initializers and 'transient' fields are considered unnecessary to copy.",
+                "markdown": "Reports copy constructors that don't copy all the fields of the class. 'final' fields with initializers and 'transient' fields are considered unnecessary to copy."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-CopyConstructorMissesField",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-UrlHashCode",
+              "shortDescription": {
+                "text": "opengrep-benchmark-UrlHashCode"
+              },
+              "fullDescription": {
+                "text": "Using java.net.URL in equals/hashCode or as elements/keys in sets/maps can trigger DNS lookups. Prefer java.net.URI to avoid network delays.",
+                "markdown": "Using java.net.URL in equals/hashCode or as elements/keys in sets/maps can trigger DNS lookups. Prefer java.net.URI to avoid network delays."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-UrlHashCode",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-RedundantMethodOverride",
+              "shortDescription": {
+                "text": "opengrep-benchmark-RedundantMethodOverride"
+              },
+              "fullDescription": {
+                "text": "Method override is redundant; it duplicates the super implementation or only delegates to it. Consider removing the override.",
+                "markdown": "Method override is redundant; it duplicates the super implementation or only delegates to it. Consider removing the override."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-RedundantMethodOverride",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-ClassEscapesItsScope",
+              "shortDescription": {
+                "text": "opengrep-benchmark-ClassEscapesItsScope"
+              },
+              "fullDescription": {
+                "text": "Member exposes a less visible class in its signature (class escapes its scope)",
+                "markdown": "Member exposes a less visible class in its signature (class escapes its scope)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-ClassEscapesItsScope",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-UnnecessaryContinue",
+              "shortDescription": {
+                "text": "opengrep-benchmark-UnnecessaryContinue"
+              },
+              "fullDescription": {
+                "text": "Unnecessary 'continue': it is the last reachable statement in the loop and can be removed.",
+                "markdown": "Unnecessary 'continue': it is the last reachable statement in the loop and can be removed."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-UnnecessaryContinue",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-FieldCanBeLocal",
+              "shortDescription": {
+                "text": "opengrep-benchmark-FieldCanBeLocal"
+              },
+              "fullDescription": {
+                "text": "Field can be local: redundant class field may be replaced with a local variable.",
+                "markdown": "Field can be local: redundant class field may be replaced with a local variable."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-FieldCanBeLocal",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-IgnoreResultOfCall",
+              "shortDescription": {
+                "text": "opengrep-benchmark-IgnoreResultOfCall"
+              },
+              "fullDescription": {
+                "text": "Ignored return value of method call; consider handling the result",
+                "markdown": "Ignored return value of method call; consider handling the result"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-IgnoreResultOfCall",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-StringConcatenationInsideStringBufferAppend",
+              "shortDescription": {
+                "text": "opengrep-benchmark-StringConcatenationInsideStringBufferAppend"
+              },
+              "fullDescription": {
+                "text": "String concatenation used as the argument to append(); prefer chained append calls on the existing StringBuffer/StringBuilder/Appendable; ignores compile-time evaluated concatenations.",
+                "markdown": "String concatenation used as the argument to append(); prefer chained append calls on the existing StringBuffer/StringBuilder/Appendable; ignores compile-time evaluated concatenations."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-StringConcatenationInsideStringBufferAppend",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-UnnecessaryUnicodeEscape",
+              "shortDescription": {
+                "text": "opengrep-benchmark-UnnecessaryUnicodeEscape"
+              },
+              "fullDescription": {
+                "text": "Unnecessary Unicode escape sequence; replace it with the actual character (control characters are excluded, except for line feed and horizontal tab).",
+                "markdown": "Unnecessary Unicode escape sequence; replace it with the actual character (control characters are excluded, except for line feed and horizontal tab)."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-UnnecessaryUnicodeEscape",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-MismatchedCollectionQueryUpdate",
+              "shortDescription": {
+                "text": "opengrep-benchmark-MismatchedCollectionQueryUpdate"
+              },
+              "fullDescription": {
+                "text": "Reports collections whose contents are either queried and not updated, or updated and not queried. Such inconsistent queries and updates are pointless and may indicate either dead code or a typo. Use the inspection settings to specify name patterns that correspond to update/query methods. Query methods that return an element are automatically detected, and only those that write data to an output parameter (for example, an 'OutputStream') need to be specified.",
+                "markdown": "Reports collections whose contents are either queried and not updated, or updated and not queried. Such inconsistent queries and updates are pointless and may indicate either dead code or a typo. Use the inspection settings to specify name patterns that correspond to update/query methods. Query methods that return an element are automatically detected, and only those that write data to an output parameter (for example, an 'OutputStream') need to be specified."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-MismatchedCollectionQueryUpdate",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-InnerClassMayBeStatic",
+              "shortDescription": {
+                "text": "opengrep-benchmark-InnerClassMayBeStatic"
+              },
+              "fullDescription": {
+                "text": "Reports inner classes that can be made 'static'. A 'static' inner class does not keep an implicit reference to its enclosing instance and can reduce memory usage and prevent leaks on Java 17 and earlier.",
+                "markdown": "Reports inner classes that can be made 'static'. A 'static' inner class does not keep an implicit reference to its enclosing instance and can reduce memory usage and prevent leaks on Java 17 and earlier."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-InnerClassMayBeStatic",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-SizeReplaceableByIsEmpty",
+              "shortDescription": {
+                "text": "opengrep-benchmark-SizeReplaceableByIsEmpty"
+              },
+              "fullDescription": {
+                "text": "Use isEmpty() instead of size()/length() comparison to 0.",
+                "markdown": "Use isEmpty() instead of size()/length() comparison to 0."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-SizeReplaceableByIsEmpty",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-DeprecatedIsStillUsed",
+              "shortDescription": {
+                "text": "opengrep-benchmark-DeprecatedIsStillUsed"
+              },
+              "fullDescription": {
+                "text": "Deprecated member is still used",
+                "markdown": "Deprecated member is still used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-DeprecatedIsStillUsed",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-FieldMayBeFinal",
+              "shortDescription": {
+                "text": "opengrep-benchmark-FieldMayBeFinal"
+              },
+              "fullDescription": {
+                "text": "Field can be final. Private fields that are assigned only once should be declared final to improve code safety and clarity.",
+                "markdown": "Field can be final. Private fields that are assigned only once should be declared final to improve code safety and clarity."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-FieldMayBeFinal",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-UseBulkOperation",
+              "shortDescription": {
+                "text": "opengrep-benchmark-UseBulkOperation"
+              },
+              "fullDescription": {
+                "text": "Replace per-element additions inside loops with a bulk operation (e.g., dst.addAll(src); if src is an array, wrap with Arrays.asList(src)).",
+                "markdown": "Replace per-element additions inside loops with a bulk operation (e.g., dst.addAll(src); if src is an array, wrap with Arrays.asList(src))."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-UseBulkOperation",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "opengrep-benchmark-SynchronizationOnLocalVariableOrMethodParameter",
+              "shortDescription": {
+                "text": "opengrep-benchmark-SynchronizationOnLocalVariableOrMethodParameter"
+              },
+              "fullDescription": {
+                "text": "Synchronizing on a method parameter or local variable is error-prone and can lead to incorrect behavior. Synchronize on a dedicated field or lock object instead.",
+                "markdown": "Synchronizing on a method parameter or local variable is error-prone and can lead to incorrect behavior. Synchronize on a dedicated field or lock object instead."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning",
+                "parameters": {
+                  "suppressToolId": "opengrep-benchmark-SynchronizationOnLocalVariableOrMethodParameter",
+                  "ideaSeverity": "WARNING",
+                  "qodanaSeverity": "High",
+                  "codeQualityCategory": "Unspecified"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "OpenGrep/Java",
+                    "index": 55,
+                    "toolComponent": {
+                      "name": "QDJVM"
+                    }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
+                }
+              ]
+            }
+          ],
+          "taxa": [],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        },
+        "extensions": []
+      },
+      "invocations": [
+        {
+          "startTimeUtc": "2026-03-28T16:49:10.737042538Z",
+          "exitCode": 0,
+          "toolExecutionNotifications": [
+            {
+              "message": {
+                "text": "Roots jar:///home/vlad/IdeaProjects/edict-jenkins-opengrep-generator-benchmark/cli/target/cli-2.424-SNAPSHOT.jar!/ of the library 'Maven Shade: org.jenkins-ci.main:cli:2.424-SNAPSHOT' from module 'jenkins-test' were not resolved"
+              },
+              "level": "error",
+              "timeUtc": "2026-03-28T16:49:28.914917733Z",
+              "properties": {
+                "qodanaKind": "sanityFailure"
+              }
+            },
+            {
+              "message": {
+                "text": "Roots jar:///home/vlad/IdeaProjects/edict-jenkins-opengrep-generator-benchmark/cli/target/cli-2.424-SNAPSHOT.jar!/ of the library 'Maven Shade: org.jenkins-ci.main:cli:2.424-SNAPSHOT' from module 'jenkins-war' were not resolved"
+              },
+              "level": "error",
+              "timeUtc": "2026-03-28T16:49:28.91652223Z",
+              "properties": {
+                "qodanaKind": "sanityFailure"
+              }
+            },
+            {
+              "message": {
+                "text": "Roots jar:///home/vlad/IdeaProjects/edict-jenkins-opengrep-generator-benchmark/cli/target/cli-2.424-SNAPSHOT.jar!/ of the library 'Maven Shade: org.jenkins-ci.main:cli:2.424-SNAPSHOT' from module 'jenkins-core' were not resolved"
+              },
+              "level": "error",
+              "timeUtc": "2026-03-28T16:49:28.917597055Z",
+              "properties": {
+                "qodanaKind": "sanityFailure"
+              }
+            },
+            {
+              "message": {
+                "text": "Roots jar:///home/vlad/IdeaProjects/edict-jenkins-opengrep-generator-benchmark/cli/target/cli-2.424-SNAPSHOT.jar!/ of the library 'Maven Shade: org.jenkins-ci.main:cli:2.424-SNAPSHOT' from module 'jenkins-coverage' were not resolved"
+              },
+              "level": "error",
+              "timeUtc": "2026-03-28T16:49:28.917714337Z",
+              "properties": {
+                "qodanaKind": "sanityFailure"
+              }
+            }
+          ],
+          "executionSuccessful": true
+        }
+      ],
+      "language": "en-US",
+      "versionControlProvenance": [
+        {
+          "revisionId": "d450cb5d59f9428252eef9e5777874ab3368751b",
+          "branch": "step2",
+          "properties": {
+            "repoUrl": "",
+            "lastAuthorName": "DarkMechanikum",
+            "vcsType": "Git",
+            "lastAuthorEmail": "v.shtarev08@gmail.com"
+          }
+        }
+      ],
+      "originalUriBaseIds": {
+        "SRCROOT": {
+          "description": {
+            "text": "The subdirectory within the project that was analyzed (--project-dir qodana CLI parameter)"
+          }
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "id": "jenkins/qodana/2026-03-28",
+        "guid": "334092b1-e182-4f6c-95bd-9843df06705b",
+        "properties": {
+          "jobUrl": "",
+          "analysisKind": "regular"
+        }
+      },
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "properties": {
+        "qodana.coverage.files.provided": false,
+        "configProfile": "path",
+        "deviceId": "200820300000000-0000-0000-0000-000000000000",
+        "qodanaNewResultSummary": {
+          "total": 0
+        }
+      }
+    }
+  ]
+}

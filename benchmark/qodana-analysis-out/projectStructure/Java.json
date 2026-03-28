@@ -1,0 +1,40 @@
+{
+  "modules": [
+    {
+      "name": "websocket-spi",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-test",
+      "languageLevel": 11
+    },
+    {
+      "name": "cli",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-war",
+      "languageLevel": 8
+    },
+    {
+      "name": "websocket-jetty10",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-core",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-coverage",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-parent",
+      "languageLevel": 11
+    },
+    {
+      "name": "jenkins-bom",
+      "languageLevel": 11
+    }
+  ]
+}

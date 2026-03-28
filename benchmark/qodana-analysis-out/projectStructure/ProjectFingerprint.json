@@ -1,0 +1,23 @@
+{
+  "languages": [
+    "XML",
+    "Java",
+    "Properties",
+    "Plain text",
+    "JavaScript",
+    "SCSS",
+    "textmate",
+    "CSS",
+    "HTML",
+    "SVG",
+    "Shell Script",
+    "JSON",
+    ".gitignore (GitIgnore)",
+    "Groovy",
+    "Markdown",
+    "DTD",
+    "YAML",
+    "Dockerfile",
+    "EditorConfig"
+  ]
+}

@@ -1,4 +1,6 @@
 version: 1.0
 disableSanityInspections: true
+include:
+  - name: OpenGrepInspection
 profile:
   path: .qodana/opengrep/benchmark-inspection-profile.yaml
