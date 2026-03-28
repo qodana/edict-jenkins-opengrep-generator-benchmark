@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/schemastore/schemastore/master/src/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "QDJVM",
+          "fullName": "Qodana for JVM",
+          "version": "262.SNAPSHOT",
+          "rules": [],
+          "taxa": [],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        },
+        "extensions": []
+      },
+      "invocations": [
+        {
+          "startTimeUtc": "2026-03-28T04:56:54.821491712Z",
+          "executionSuccessful": true
+        }
+      ],
+      "language": "en-US",
+      "originalUriBaseIds": {
+        "SRCROOT": {
+          "description": {
+            "text": "The subdirectory within the project that was analyzed (--project-dir qodana CLI parameter)"
+          }
+        }
+      },
+      "results": [],
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "properties": {
+        "deviceId": "200820300000000-0000-0000-0000-000000000000",
+        "qodana.coverage.files.provided": false
+      }
+    }
+  ]
+}
