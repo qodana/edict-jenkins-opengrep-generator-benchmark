@@ -1,0 +1,27 @@
+rules:
+  - id: opengrep-benchmark-RedundantMethodOverride
+    message: Method override is redundant; it duplicates the super implementation or only delegates to it. Consider removing the override.
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: |
+              @Override
+              $RET $M(...) {
+                super.$M(...);
+              }
+          - pattern: |
+              @Override
+              $RET $M(...) {
+                return super.$M(...);
+              }
+          - pattern: |
+              @Override
+              $RET $M(...) {
+                if ($A == null) {
+                  ...
+                  throw $E;
+                  ...
+                }
+                super.$X().$Y($A);
+              }

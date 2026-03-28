@@ -1,0 +1,5 @@
+{
+    "id": "CopyConstructorMissesField",
+    "resultPath": "CopyConstructorMissesField/CopyConstructorMissesField.opengrep.yaml",
+    "error": ""
+}

@@ -1,0 +1,9 @@
+rules:
+  - id: opengrep-benchmark-UseBulkOperation
+    message: Replace per-element additions inside loops with a bulk operation (e.g., dst.addAll(src); if src is an array, wrap with Arrays.asList(src)).
+    languages: [java]
+    severity: WARNING
+    pattern: |
+      for ($T $E : $SRC) {
+        $DST.add($E);
+      }

@@ -1,0 +1,10 @@
+rules:
+  - id: FieldCanBeLocal
+    message: "Field can be local: redundant class field may be replaced with a local variable."
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern: |
+          private final $T $F;
+      - pattern-not: |
+          private static final $T $F;

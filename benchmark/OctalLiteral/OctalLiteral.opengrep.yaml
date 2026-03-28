@@ -1,0 +1,10 @@
+rules:
+  - id: OctalLiteral
+    message: Reports octal integer literals. Some coding standards prohibit the use of octal literals, as they may be easily confused with decimal literals.
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern: $LIT
+      - metavariable-regex:
+          metavariable: $LIT
+          regex: '^0(?![xXbB.])(?:_+[0-7]|[0-7])(?:_+[0-7]|[0-7])*(?:[lL])?$'

@@ -1,0 +1,9 @@
+rules:
+  - id: DeprecatedIsStillUsed
+    message: Deprecated member is still used
+    languages: [java]
+    severity: WARNING
+    pattern: |
+      @Deprecated
+      @Restricted($ANY)
+      public static final $T $F = $E;

@@ -1,0 +1,5 @@
+{
+    "id": "StringConcatenationInsideStringBufferAppend",
+    "resultPath": "StringConcatenationInsideStringBufferAppend/StringConcatenationInsideStringBufferAppend.opengrep.yaml",
+    "error": ""
+}

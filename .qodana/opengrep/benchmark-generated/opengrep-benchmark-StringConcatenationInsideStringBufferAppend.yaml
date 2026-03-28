@@ -1,0 +1,13 @@
+rules:
+  - id: opengrep-benchmark-StringConcatenationInsideStringBufferAppend
+    message: String concatenation used as the argument to append(); prefer chained append calls on the existing StringBuffer/StringBuilder/Appendable; ignores compile-time evaluated concatenations.
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: '$RECV.append("$S" + $X)'
+          - pattern: '$RECV.append($X + "$S")'
+      - pattern-not: '$RECV.append("$S1" + "$S2")'
+      - pattern-not: '$RECV.append(("$S1" + "$S2"))'
+      - pattern-not: '$RECV.append(("$S1" + "$S2") + "$S3")'
+      - pattern-not: '$RECV.append("$S1" + ("$S2" + "$S3"))'

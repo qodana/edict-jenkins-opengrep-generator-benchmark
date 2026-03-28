@@ -1,0 +1,19 @@
+rules:
+  - id: ClassEscapesItsScope
+    message: Member exposes a less visible class in its signature (class escapes its scope)
+    languages: [java]
+    severity: WARNING
+    pattern: |
+      class PlainCLIProtocol {
+        ...
+        private enum Op { ... }
+        ...
+        abstract static class EitherSide implements Closeable {
+          ...
+          protected final OutputStream stream(final Op $P) {
+            ...
+          }
+          ...
+        }
+        ...
+      }

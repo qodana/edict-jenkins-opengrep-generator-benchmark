@@ -1,0 +1,15 @@
+rules:
+  - id: opengrep-benchmark-StaticInitializerReferencesSubClass
+    message: Reports classes that refer to their subclasses in static initializers or static fields. Such references can cause JVM-level deadlocks in multithreaded environment.
+    languages: [java]
+    severity: WARNING
+    pattern: |
+      class $SUPER {
+        ...
+        public static final $SUPER $F = new $SUB(...);
+        ...
+        class $SUB extends $SUPER {
+          ...
+        }
+        ...
+      }

@@ -1,0 +1,49 @@
+rules:
+  - id: opengrep-benchmark-FieldMayBeFinal
+    message: Field can be final. Private fields that are assigned only once should be declared final to improve code safety and clarity.
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: |
+              private $T $F;
+          - pattern: |
+              private $T $F = $INIT;
+          - pattern: |
+              @$A
+              private $T $F;
+          - pattern: |
+              @$A
+              private $T $F = $INIT;
+          - pattern: |
+              @$A private $T $F;
+          - pattern: |
+              @$A private $T $F = $INIT;
+      - pattern-not: |
+          private final $T $F;
+      - pattern-not: |
+          private final $T $F = $INIT;
+      - pattern-not: |
+          private static final $T $F;
+      - pattern-not: |
+          private static final $T $F = $INIT;
+      - pattern-not: |
+          @$A
+          private final $T $F;
+      - pattern-not: |
+          @$A
+          private final $T $F = $INIT;
+      - pattern-not: |
+          @$A private final $T $F;
+      - pattern-not: |
+          @$A private final $T $F = $INIT;
+      - pattern-not: |
+          @$A
+          private static final $T $F;
+      - pattern-not: |
+          @$A
+          private static final $T $F = $INIT;
+      - pattern-not: |
+          @$A private static final $T $F;
+      - pattern-not: |
+          @$A private static final $T $F = $INIT;

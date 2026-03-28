@@ -1,0 +1,138 @@
+rules:
+  - id: opengrep-benchmark-UnnecessaryContinue
+    message: "Unnecessary 'continue': it is the last reachable statement in the loop and can be removed."
+    languages: [java]
+    severity: WARNING
+    pattern-either:
+      - pattern: |
+          for ($T $E : $COL) {
+            ...
+            continue;
+          }
+      - pattern: |
+          for ($I; $C; $U) {
+            ...
+            continue;
+          }
+      - pattern: |
+          while ($C) {
+            ...
+            continue;
+          }
+      - pattern: |
+          do {
+            ...
+            continue;
+          } while ($C);
+      - pattern: |
+          for ($T $E : $COL) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            }
+          }
+      - pattern: |
+          for ($T $E : $COL) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else if ($C2) {
+              ...
+            }
+          }
+      - pattern: |
+          for ($T $E : $COL) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else {
+              ...
+            }
+          }
+      - pattern: |
+          for ($I; $C; $U) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            }
+          }
+      - pattern: |
+          for ($I; $C; $U) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else if ($C2) {
+              ...
+            }
+          }
+      - pattern: |
+          for ($I; $C; $U) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else {
+              ...
+            }
+          }
+      - pattern: |
+          while ($C) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            }
+          }
+      - pattern: |
+          while ($C) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else if ($C2) {
+              ...
+            }
+          }
+      - pattern: |
+          while ($C) {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else {
+              ...
+            }
+          }
+      - pattern: |
+          do {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            }
+          } while ($C);
+      - pattern: |
+          do {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else if ($C2) {
+              ...
+            }
+          } while ($C);
+      - pattern: |
+          do {
+            ...
+            if ($COND) {
+              ...
+              continue;
+            } else {
+              ...
+            }
+          } while ($C);

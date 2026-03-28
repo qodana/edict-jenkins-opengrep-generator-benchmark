@@ -1,0 +1,40 @@
+# OpenGrep benchmark: only the inspections below are enabled; base is the Qodana empty profile.
+baseProfile: empty
+
+inspections:
+  - inspection: opengrep-benchmark-ClassEscapesItsScope
+    enabled: true
+  - inspection: opengrep-benchmark-CopyConstructorMissesField
+    enabled: true
+  - inspection: opengrep-benchmark-DeprecatedIsStillUsed
+    enabled: true
+  - inspection: opengrep-benchmark-FieldCanBeLocal
+    enabled: true
+  - inspection: opengrep-benchmark-FieldMayBeFinal
+    enabled: true
+  - inspection: opengrep-benchmark-IgnoreResultOfCall
+    enabled: true
+  - inspection: opengrep-benchmark-InnerClassMayBeStatic
+    enabled: true
+  - inspection: opengrep-benchmark-MismatchedCollectionQueryUpdate
+    enabled: true
+  - inspection: opengrep-benchmark-OctalLiteral
+    enabled: true
+  - inspection: opengrep-benchmark-RedundantMethodOverride
+    enabled: true
+  - inspection: opengrep-benchmark-SizeReplaceableByIsEmpty
+    enabled: true
+  - inspection: opengrep-benchmark-StaticInitializerReferencesSubClass
+    enabled: true
+  - inspection: opengrep-benchmark-StringConcatenationInsideStringBufferAppend
+    enabled: true
+  - inspection: opengrep-benchmark-SynchronizationOnLocalVariableOrMethodParameter
+    enabled: true
+  - inspection: opengrep-benchmark-UnnecessaryContinue
+    enabled: true
+  - inspection: opengrep-benchmark-UnnecessaryUnicodeEscape
+    enabled: true
+  - inspection: opengrep-benchmark-UrlHashCode
+    enabled: true
+  - inspection: opengrep-benchmark-UseBulkOperation
+    enabled: true

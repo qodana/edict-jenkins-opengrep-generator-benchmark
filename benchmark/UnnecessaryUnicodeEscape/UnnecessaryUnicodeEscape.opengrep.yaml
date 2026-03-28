@@ -1,0 +1,17 @@
+rules:
+  - id: UnnecessaryUnicodeEscape
+    message: Unnecessary Unicode escape sequence; replace it with the actual character (control characters are excluded, except for line feed and horizontal tab).
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - patterns:
+              - pattern: '"$S"'
+              - metavariable-regex:
+                  metavariable: $S
+                  regex: '.*\\u+(?!000[0-8B-Fb-f]|001[0-9A-Fa-f]|007[Ff]|008[0-9A-Fa-f]|009[0-9A-Fa-f])[0-9A-Fa-f]{4}.*'
+          - patterns:
+              - pattern: "'$C'"
+              - metavariable-regex:
+                  metavariable: $C
+                  regex: '.*\\u+(?!000[0-8B-Fb-f]|001[0-9A-Fa-f]|007[Ff]|008[0-9A-Fa-f]|009[0-9A-Fa-f])[0-9A-Fa-f]{4}.*'

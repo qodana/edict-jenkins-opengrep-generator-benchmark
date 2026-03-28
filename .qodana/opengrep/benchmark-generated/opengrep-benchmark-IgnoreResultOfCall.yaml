@@ -1,0 +1,8 @@
+rules:
+  - id: opengrep-benchmark-IgnoreResultOfCall
+    message: Ignored return value of method call; consider handling the result
+    languages: [java]
+    severity: WARNING
+    pattern-either:
+      - pattern: "$RECV.write(...);"
+      - pattern: "$RECV.read(...);"

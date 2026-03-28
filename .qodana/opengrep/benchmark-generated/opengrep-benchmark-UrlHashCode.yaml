@@ -1,0 +1,126 @@
+rules:
+  - id: opengrep-benchmark-UrlHashCode
+    message: Using java.net.URL in equals/hashCode or as elements/keys in sets/maps can trigger DNS lookups. Prefer java.net.URI to avoid network delays.
+    languages: [java]
+    severity: WARNING
+    pattern-either:
+      - pattern: |
+          $RET $FUNC(..., URL $U, ...) {
+            ...
+            $U.equals($X);
+            ...
+          }
+      - pattern: |
+          URL $U = ...;
+          ...
+          $U.equals($X);
+      - pattern: |
+          $RET $FUNC(..., URL $U, ...) {
+            ...
+            $U.hashCode();
+            ...
+          }
+      - pattern: |
+          URL $U = ...;
+          ...
+          $U.hashCode();
+      - pattern: |
+          $RET $FUNC(..., java.net.URL $U, ...) {
+            ...
+            $U.equals($X);
+            ...
+          }
+      - pattern: |
+          java.net.URL $U = ...;
+          ...
+          $U.equals($X);
+      - pattern: |
+          $RET $FUNC(..., java.net.URL $U, ...) {
+            ...
+            $U.hashCode();
+            ...
+          }
+      - pattern: |
+          java.net.URL $U = ...;
+          ...
+          $U.hashCode();
+      - pattern: |
+          $RET $FUNC(..., Set<URL> $S, ...) {
+            ...
+            $S.add($E);
+            ...
+          }
+      - pattern: |
+          $RET $FUNC(..., Set<URL> $S, ...) {
+            ...
+            $S.contains($E);
+            ...
+          }
+      - pattern: |
+          Set<URL> $S = ...;
+          ...
+          $S.add($E);
+      - pattern: |
+          Set<URL> $S = ...;
+          ...
+          $S.contains($E);
+      - pattern: |
+          $RET $FUNC(..., java.util.Set<java.net.URL> $S, ...) {
+            ...
+            $S.add($E);
+            ...
+          }
+      - pattern: |
+          $RET $FUNC(..., java.util.Set<java.net.URL> $S, ...) {
+            ...
+            $S.contains($E);
+            ...
+          }
+      - pattern: |
+          java.util.Set<java.net.URL> $S = ...;
+          ...
+          $S.add($E);
+      - pattern: |
+          java.util.Set<java.net.URL> $S = ...;
+          ...
+          $S.contains($E);
+      - pattern: |
+          $RET $FUNC(..., Map<URL, $V> $M, ...) {
+            ...
+            $M.put($K, $V2);
+            ...
+          }
+      - pattern: |
+          $RET $FUNC(..., Map<URL, $V> $M, ...) {
+            ...
+            $M.containsKey($K);
+            ...
+          }
+      - pattern: |
+          Map<URL, $V> $M = ...;
+          ...
+          $M.put($K, $V2);
+      - pattern: |
+          Map<URL, $V> $M = ...;
+          ...
+          $M.containsKey($K);
+      - pattern: |
+          $RET $FUNC(..., java.util.Map<java.net.URL, $V> $M, ...) {
+            ...
+            $M.put($K, $V2);
+            ...
+          }
+      - pattern: |
+          $RET $FUNC(..., java.util.Map<java.net.URL, $V> $M, ...) {
+            ...
+            $M.containsKey($K);
+            ...
+          }
+      - pattern: |
+          java.util.Map<java.net.URL, $V> $M = ...;
+          ...
+          $M.put($K, $V2);
+      - pattern: |
+          java.util.Map<java.net.URL, $V> $M = ...;
+          ...
+          $M.containsKey($K);

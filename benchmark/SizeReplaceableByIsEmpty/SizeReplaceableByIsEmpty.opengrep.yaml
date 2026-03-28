@@ -1,0 +1,23 @@
+rules:
+  - id: SizeReplaceableByIsEmpty
+    message: "Use isEmpty() instead of size()/length() comparison to 0."
+    languages: [java]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: '$X.size() == 0'
+          - pattern: '0 == $X.size()'
+          - pattern: '$X.size() != 0'
+          - pattern: '0 != $X.size()'
+          - pattern: '$X.size() > 0'
+          - pattern: '0 < $X.size()'
+          - pattern: '$X.size() <= 0'
+          - pattern: '0 >= $X.size()'
+          - pattern: '$X.length() == 0'
+          - pattern: '0 == $X.length()'
+          - pattern: '$X.length() != 0'
+          - pattern: '0 != $X.length()'
+          - pattern: '$X.length() > 0'
+          - pattern: '0 < $X.length()'
+          - pattern: '$X.length() <= 0'
+          - pattern: '0 >= $X.length()'
