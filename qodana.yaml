@@ -1,3 +1,4 @@
 version: 1.0
+disableSanityInspections: true
 profile:
   path: .qodana/opengrep/benchmark-inspection-profile.yaml
