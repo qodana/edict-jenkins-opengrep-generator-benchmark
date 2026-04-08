@@ -1,17 +1,32 @@
 {
-  "ruleId": "UnnecessaryContinue",
-  "description": "Reports 'continue' statements if they are the last reachable statements in the loop. These 'continue' statements are unnecessary and can be safely removed. Example: 'for (String element: elements) {\n    System.out.println();\n    continue;\n  }' After the quick-fix is applied: 'for (String element: elements) {\n    System.out.println();\n  }' Inspection ID: UnnecessaryContinue",
-  "positiveExamples": [
-    {
-      "path": "core/src/main/java/jenkins/model/Jenkins.java",
-      "expectedProblemRanges": [
-        {
-          "start": 5285,
-          "end": 5290
-        }
-      ]
+  "inspectionSpec": {
+    "ruleId": "UnnecessaryContinue",
+    "ruleName": "",
+    "description": "Reports 'continue' statements if they are the last reachable statements in the loop. These 'continue' statements are unnecessary and can be safely removed. Example: 'for (String element: elements) {\n    System.out.println();\n    continue;\n  }' After the quick-fix is applied: 'for (String element: elements) {\n    System.out.println();\n  }' Inspection ID: UnnecessaryContinue",
+    "severity": "",
+    "language": "Java",
+    "positiveExamples": [
+      {
+        "path": "core/src/main/java/jenkins/model/Jenkins.java",
+        "expectedProblemRanges": [
+          {
+            "start": 5285,
+            "end": 5290
+          }
+        ]
+      }
+    ],
+    "negativeExamples": [],
+    "optionalPositiveExamples": [],
+    "optionalNegativeExamples": [],
+    "source": {
+      "type": "FromCommit",
+      "commitHash": "",
+      "message": "",
+      "verificationDate": 0
     }
-  ],
-  "negativeExamples": [],
-  "language": "Java"
+  },
+  "optionalPrecisionThreshold": 0.8,
+  "optionalRecallThreshold": 0.7,
+  "optionalF1Threshold": 0.1
 }

@@ -1,17 +1,32 @@
 {
-  "ruleId": "OctalLiteral",
-  "description": "Reports octal integer literals. Some coding standards prohibit the use of octal literals, as they may be easily confused with decimal literals. Example: 'int i = 015;\n  int j = 0_777;' Inspection ID: OctalLiteral",
-  "positiveExamples": [
-    {
-      "path": "core/src/main/java/hudson/FilePath.java",
-      "expectedProblemRanges": [
-        {
-          "start": 3059,
-          "end": 3064
-        }
-      ]
+  "inspectionSpec": {
+    "ruleId": "OctalLiteral",
+    "ruleName": "",
+    "description": "Reports octal integer literals. Some coding standards prohibit the use of octal literals, as they may be easily confused with decimal literals. Example: 'int i = 015;\n  int j = 0_777;' Inspection ID: OctalLiteral",
+    "severity": "",
+    "language": "Java",
+    "positiveExamples": [
+      {
+        "path": "core/src/main/java/hudson/FilePath.java",
+        "expectedProblemRanges": [
+          {
+            "start": 3059,
+            "end": 3064
+          }
+        ]
+      }
+    ],
+    "negativeExamples": [],
+    "optionalPositiveExamples": [],
+    "optionalNegativeExamples": [],
+    "source": {
+      "type": "FromCommit",
+      "commitHash": "",
+      "message": "",
+      "verificationDate": 0
     }
-  ],
-  "negativeExamples": [],
-  "language": "Java"
+  },
+  "optionalPrecisionThreshold": 0.8,
+  "optionalRecallThreshold": 0.7,
+  "optionalF1Threshold": 0.1
 }
