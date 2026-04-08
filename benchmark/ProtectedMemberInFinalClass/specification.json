@@ -13,7 +13,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "negativeExamples": [
@@ -24,7 +25,8 @@
             "start": 38,
             "end": 43
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "optionalPositiveExamples": [
@@ -35,7 +37,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/Run.java",
@@ -44,7 +47,8 @@
             "start": 1749,
             "end": 1754
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -53,7 +57,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -62,7 +67,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -71,7 +77,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -80,7 +87,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -89,7 +97,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/node_monitors/DiskSpaceMonitorDescriptor.java",
@@ -98,7 +107,8 @@
             "start": 126,
             "end": 131
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/UpdateCenter.java",
@@ -107,7 +117,8 @@
             "start": 2436,
             "end": 2441
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/Launcher.java",
@@ -116,7 +127,8 @@
             "start": 202,
             "end": 207
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "optionalNegativeExamples": [
@@ -127,7 +139,8 @@
             "start": 60,
             "end": 65
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/node_monitors/ArchitectureMonitor.java",
@@ -136,7 +149,8 @@
             "start": 43,
             "end": 48
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/jenkins/security/ImpersonatingExecutorService.java",
@@ -145,7 +159,8 @@
             "start": 60,
             "end": 65
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/util/RobustMapConverter.java",
@@ -154,7 +169,8 @@
             "start": 46,
             "end": 51
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/jenkins/DailyCheck.java",
@@ -163,7 +179,8 @@
             "start": 67,
             "end": 72
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/jenkins/security/ImpersonatingScheduledExecutorService.java",
@@ -172,7 +189,8 @@
             "start": 71,
             "end": 76
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/jenkins/security/ImpersonatingScheduledExecutorService.java",
@@ -181,7 +199,8 @@
             "start": 71,
             "end": 76
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "source": {

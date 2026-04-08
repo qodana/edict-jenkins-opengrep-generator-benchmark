@@ -13,7 +13,8 @@
             "start": 829,
             "end": 834
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "negativeExamples": [
@@ -24,7 +25,8 @@
             "start": 829,
             "end": 834
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "optionalPositiveExamples": [
@@ -35,7 +37,8 @@
             "start": 52,
             "end": 57
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/PluginManager.java",
@@ -44,7 +47,8 @@
             "start": 1747,
             "end": 1752
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/util/ProcessTree.java",
@@ -53,7 +57,8 @@
             "start": 829,
             "end": 834
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/cli/BuildCommand.java",
@@ -62,7 +67,8 @@
             "start": 196,
             "end": 201
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/util/Retrier.java",
@@ -71,7 +77,8 @@
             "start": 84,
             "end": 89
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "cli/src/main/java/hudson/cli/CLI.java",
@@ -80,7 +87,8 @@
             "start": 405,
             "end": 410
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/Run.java",
@@ -89,7 +97,8 @@
             "start": 1709,
             "end": 1714
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/AbstractBuild.java",
@@ -98,7 +107,8 @@
             "start": 686,
             "end": 691
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/AbstractItem.java",
@@ -107,7 +117,8 @@
             "start": 786,
             "end": 791
           }
-        ]
+        ],
+        "revision": "HEAD"
       },
       {
         "path": "core/src/main/java/hudson/model/Run.java",
@@ -116,7 +127,8 @@
             "start": 1709,
             "end": 1714
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "optionalNegativeExamples": [],

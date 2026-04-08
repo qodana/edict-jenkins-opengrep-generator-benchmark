@@ -13,7 +13,8 @@
             "start": 673,
             "end": 678
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "negativeExamples": [
@@ -24,7 +25,8 @@
             "start": 31,
             "end": 36
           }
-        ]
+        ],
+        "revision": "HEAD"
       }
     ],
     "optionalPositiveExamples": [],
